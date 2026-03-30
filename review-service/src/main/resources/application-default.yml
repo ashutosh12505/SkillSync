@@ -1,0 +1,30 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: review-service
+
+  datasource:
+    url: jdbc:mysql://mysql-review:3306/skillsync_review?useSSL=false&serverTimezone=UTC   # ✅ FIXED
+    username: javauser
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka   # ✅ FIXED
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans   # ✅ FIXED

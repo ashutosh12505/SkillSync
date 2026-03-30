@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: skill-service
+
+  profiles:
+    active: local   # ✅ added
+
+  config:
+    import: "optional:classpath:application-default.yml,optional:configserver:http://localhost:8888"
