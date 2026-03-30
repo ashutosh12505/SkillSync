@@ -57,6 +57,7 @@ node_modules/
 # Docker (optional later)
 # =========================
 *.tar
+docker-compose.yml
 
 # sonalint
 
