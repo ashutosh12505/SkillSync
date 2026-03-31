@@ -32,4 +32,10 @@ public class UserController {
     public User getUserByEmail(@PathVariable String email) {
         return userRepository.findByEmail(email).orElse(null);
     }
+    
+//    void demoMethod() {
+//    	if(true) {
+//        	System.out.println("Issue");
+//        }
+//    }
 }
